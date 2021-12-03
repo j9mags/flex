@@ -13,6 +13,7 @@ import OrderScreen from "./screens/OrderScreen";
 import OrdersScreen from "./screens/OrdersScreen";
 import ShippingScreen from "./screens/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -81,6 +82,7 @@ function App() {
             <Route path="/placeorder" component={PlaceOrderScreen} />
             <Route path="/shipping" component={ShippingScreen} />
             <Route path="/payment" component={PaymentScreen} />
+            <Route path="/profile" component={ProfileScreen} />
           </div>
         </main>
         <footer className="footer">All right reserved.</footer>

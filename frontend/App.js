@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
+import ProductsScreen from "./screens/ProductsScreen";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -60,6 +62,8 @@ function App() {
           <div className="content">
             <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
+            <Route path="/product/:id" component={ProductScreen} />
+            <Route path="/products" component={ProductsScreen} />
           </div>
         </main>
         <footer className="footer">All right reserved.</footer>

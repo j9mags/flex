@@ -4,6 +4,7 @@ import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import ProductsScreen from "./screens/ProductsScreen";
+import CartScreen from "./screens/CartScreen";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -64,6 +65,7 @@ function App() {
             <Route path="/" exact={true} component={HomeScreen} />
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/products" component={ProductsScreen} />
+            <Route path="/cart/:id?" component={CartScreen} />
           </div>
         </main>
         <footer className="footer">All right reserved.</footer>

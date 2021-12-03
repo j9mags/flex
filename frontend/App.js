@@ -1,10 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
+import { useSelector } from "react-redux";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import ProductsScreen from "./screens/ProductsScreen";
 import CartScreen from "./screens/CartScreen";
+import SigninScreen from "./screens/SigninScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -51,11 +54,11 @@ function App() {
           </button>
           <ul className="categories">
             <li>
-              <Link to="/category/Pants">Pants</Link>
+              <Link to="/category/Pants">Machines</Link>
             </li>
 
             <li>
-              <Link to="/category/Shirts">Shirts</Link>
+              <Link to="/category/Shirts">Accessories</Link>
             </li>
           </ul>
         </aside>
@@ -66,6 +69,8 @@ function App() {
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/products" component={ProductsScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
+            <Route path="/signin" component={SigninScreen} />
+            <Route path="/register" component={RegisterScreen} />
           </div>
         </main>
         <footer className="footer">All right reserved.</footer>

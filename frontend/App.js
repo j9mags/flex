@@ -11,6 +11,8 @@ import RegisterScreen from "./screens/RegisterScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import OrdersScreen from "./screens/OrdersScreen";
+import ShippingScreen from "./screens/ShippingScreen";
+import PaymentScreen from "./screens/PaymentScreen";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -76,6 +78,9 @@ function App() {
             <Route path="/register" component={RegisterScreen} />
             <Route path="/orders" component={OrdersScreen} />
             <Route path="/order/:id" component={OrderScreen} />
+            <Route path="/placeorder" component={PlaceOrderScreen} />
+            <Route path="/shipping" component={ShippingScreen} />
+            <Route path="/payment" component={PaymentScreen} />
           </div>
         </main>
         <footer className="footer">All right reserved.</footer>
